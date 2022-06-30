@@ -13,7 +13,7 @@ ENV HELM_SECRETS_HELM_PATH=/usr/local/bin/helm \
 USER root
 RUN apt-get update && \
     apt-get install -y \
-      curl && \
+    curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN curl -fSSL https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux \
